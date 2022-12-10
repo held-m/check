@@ -14,8 +14,8 @@ steps:
       api_key:
         from_secret: github
       files: /drone/src/*
-      checksum:
-        - sha512
+      # checksum:
+      #   - sha512
 
 trigger:
     event:
