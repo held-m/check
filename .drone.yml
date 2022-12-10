@@ -1,0 +1,23 @@
+---
+kind: pipeline
+type: docker
+name: check-drone
+steps:
+  - name: build
+    image: rust:1.65
+    commands:
+      - cargo build --release
+    settings:
+      when:
+        event: tag
+  
+  - name: publish
+    image: plugins/github-release
+    settings:
+      api_key:
+        from_secret: github
+      files: target/release/discord-bot-version
+      checksum:
+        - sha512
+      when:
+        event: tag
