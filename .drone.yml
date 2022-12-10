@@ -8,7 +8,7 @@ steps:
     commands:
       # - cargo build --release --target x86_64-pc-windows-gnu --target x86_64-unknown-linux-gnu
       - cargo build --release 
-      - ls -lha /drone/src/target/release
+      - ls -lha /drone/src/target/release/build
   
   - name: publish
     image: plugins/github-release
