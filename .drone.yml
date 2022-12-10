@@ -6,7 +6,7 @@ steps:
   - name: build
     image: rust:1.65
     commands:
-      - cargo build --release
+      - cargo build --release --target x86_64-pc-windows-gnu --target x86_64-unknown-linux-gnu
       - ls -lha /drone/src/target/
   
   - name: publish
