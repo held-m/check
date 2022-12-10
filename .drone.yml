@@ -13,7 +13,7 @@ steps:
     settings:
       api_key:
         from_secret: github
-      files: /drone/src
+      files: /drone/src/*
       checksum:
         - sha512
 
