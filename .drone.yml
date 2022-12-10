@@ -19,7 +19,7 @@ steps:
       #   - sha512
 
 trigger:
-  branch: 
+  # branch: 
     # - main
     event:
       - tag
