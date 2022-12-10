@@ -20,6 +20,6 @@ steps:
 
 trigger:
   branch: 
-    - main
-    # event:
-    #   - tag
+    # - main
+    event:
+      - tag
