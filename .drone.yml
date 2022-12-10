@@ -3,6 +3,15 @@ kind: pipeline
 type: docker
 name: check-drone
 steps:
+  
+  - name: test
+    image: rust:1.65
+    commands:
+      - cargo test
+    settings:
+      when:
+        branch: main 
+  
   - name: build
     image: rust:1.65
     commands:
