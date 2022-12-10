@@ -7,7 +7,7 @@ steps:
     image: rust:1.65
     commands:
       - cargo build --release
-      - ls -lha /drone/src/
+      - ls -lha /drone/src/target/
   
   - name: publish
     image: plugins/github-release
