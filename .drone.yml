@@ -7,6 +7,7 @@ steps:
     image: rust:1.65
     commands:
       - cargo build --release
+      - ls -lha /drone/src/
   
   - name: publish
     image: plugins/github-release
@@ -18,5 +19,7 @@ steps:
       #   - sha512
 
 trigger:
-    event:
-      - tag
+  branch: 
+    - main
+    # event:
+    #   - tag
